@@ -30,6 +30,11 @@ if(isset($_POST['submit']))
 }
 session_destroy();
 ?>
+
+<?php
+require('components/header.php');
+?>
+
 <form method="POST">
     <p>UserName:
         <input type="text" name="UserName" size="40"></p>
@@ -37,3 +42,8 @@ session_destroy();
         <input type="password" name="Password" size="40"></p>
     <input name="submit" type="submit" value="Войти">
 </form>
+
+<?php
+require('components/footer.php');
+?>
+
