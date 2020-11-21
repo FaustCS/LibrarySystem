@@ -59,39 +59,76 @@ if(isset($_POST['Add']))
     }
 }
 ?>
-<h2>Registration</h2>
+
+<?php
+require('components/header.php');
+?>
+<h2 style="text-align:center">Registration</h2>
 <div class="center1">
-    <form method="post">
-        <p>FirstName:
-            <input type="text" name="FirstName" size="40"></p>
-        <p>SecondName:
-            <input type="text" name="SecondName" size="40"></p>
-        <p>UserName:
-            <input type="text" name="UserName" size="40"></p>
-        <p>Your age:
-            <input type="number" min="1" max="99" name="Age"></p>
-        <p>Phone number:
-            <input type="text" name="Number"></p>
-        <p>Password:
-            <input type="text" name="Password1"></p>
-        <p>Enter your password again:
-            <input type="text" name="Password2"></p>
+	<div>
+		<p>FirstName:</p>
+        <p>SecondName:</p>
+        <p>UserName:</p>
+        <p>Your age:</p>
+        <p>Phone number:</p>
+        <p>Password:</p>
+        <p>Enter your password again:</p>
+	</div>	
+    <form method="post" class="input_data">
+        <p><input type="text" name="FirstName" size="40"></p>
+        <p><input type="text" name="SecondName" size="40"></p>
+        <p><input type="text" name="UserName" size="40"></p>
+        <p><input type="number" min="1" max="99" name="Age"></p>
+        <p><input type="text" name="Number"></p>
+        <p><input type="text" name="Password1"></p>
+        <p><input type="text" name="Password2"></p>
 
-        <p><input type="submit" name="Add" value="Add">
-            <input type="submit" name="Cancel" value="Cancel">
-
-    </form>
+	<form class="input_button">
+		<p>
+			<input class="input_button_button" type="submit" name="Add" value="Add">
+            <input class="input_button_button" type="submit" name="Cancel" value="Cancel">
+		</p>
+	</form method="post">
 </div>
 
 <style>
     .center1 {
         margin: auto;
-        width: 66%;
+        width: 66%;		
+    }
+	.center1 div{        
+        width: 45%;
+		text-align:right;
+		float:left;
     }
     h2 {
-
         margin: auto;
         margin-top: 30px;
         width: 66%;
     }
+	input{
+		width:100%;
+		margin:0;
+	}
+	form.input_data{
+		width: 54%;
+		display:block;
+		float:right;		
+	}
+	form p{
+		margin-block-start: 0.65em;   
+		margin-block-end: 0.2em;   
+	}
+	.input_button{
+		width:55%;
+		text-align:center;
+		float:right;
+	}
+	.input_button_button{
+		width:33%;		
+	}
 </style>
+
+<?php
+require('components/footer.php');
+?>
