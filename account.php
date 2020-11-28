@@ -1,5 +1,7 @@
 <?php
 session_start();
-if ( ! isset($_SESSION['Username']) ) {
+require('components/header.php');
+require('components/footer.php');
+if (!isset($_SESSION['Username'])) {
     die('Not logged in');
 }

@@ -40,7 +40,7 @@ require('components/header.php');
         <input type="text" name="UserName" size="40"></p>
     <p>Password:
         <input type="password" name="Password" size="40"></p>
-    <input name="submit" type="submit" value="Войти">
+    <input name="submit" type="submit" value="Вхід">
 </form>
 
 <?php

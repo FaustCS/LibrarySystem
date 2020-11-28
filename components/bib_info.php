@@ -1,17 +1,7 @@
 <section class="intro">
     <div class="container">
-        <h1 class="intro-title">Якісні <b>книги</b> та цікаві автори</h1>
-        <p>Книги саме для тебе</p>
-    </div>
-</section>
+        <h1 class="intro-title"> Створи своє <b>майбутнє</b> з нами!</h1>
+        <h1 class="show-case"> Якісні книги та доступні ціни</h1>
 
-<section class="features">
-    <div class="container">
-        <h2 class="features-title">Чим наша<b> бібліотека</b> відрізняється від інших?</h2>
-        <ul class="features-list">
-            <li class="feature-point">Гарний книжковий фонд</li>
-            <li class="feature-point">Книги популярних авторів</li>
-            <li class="feature-point">Регулярне обновлення каталогу книг</li>
-        </ul>
     </div>
 </section>
