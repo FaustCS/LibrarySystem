@@ -1,6 +1,5 @@
 <?php
 
-
 class DataBase{
     protected function connect(){
         $pdo = new PDO("mysql:host=librarysystem.cb82keujv05g.us-east-2.rds.amazonaws.com;port=3306;dbname=LibrarySystem", 'admin', '123va321si21_');
@@ -18,10 +17,9 @@ class DataBase{
     }
 }
 
-class Catalog extends DataBase
+class Catalog extends Database
 {
-
-
+    
     public function datatable($query){
 
         try{
@@ -63,11 +61,10 @@ if(empty($data)){
 }
    }
    public function createBook($BookName,$FirstName,$LastName,$Publishing,$Genre,$PageNumber,$InStock){
-      $pdo=$this->connnect();
+
        $data=$this->doQuery("Select Id from Author where FirstName ='".$FirstName."' And LastName='".$LastName."'");
        $AuthorId=$data[0][0];
-
-
+   $pdo=$this->connect();
        $stmt = $pdo->prepare('INSERT INTO Book
         (BookName,publishing,Genre,AmountOfPages,InStock,AuthorId) VALUES ( :bn,:pb,:gn,:pn,:st,:ai)');
        $stmt->execute(array(
