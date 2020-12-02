@@ -5,4 +5,3 @@ require('components/bib_info.php');
 require('components/content_active.php');
 require('components/features.php');
 require('components/footer.php');
-echo $_SESSION['Username'];

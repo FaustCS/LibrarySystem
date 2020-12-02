@@ -25,7 +25,8 @@
                 <li><a href="register.php">Реєстрація</a></li>
             <?php } else { ?>
             <li><a href="logout.php">Вихід</a></li>
-            <li><a href="account.php">Особистий кабінет</a></li>
+            <li><a href="account.php">Особистий кабінет</a>
+            </li>
             <li ><a href="account.php"><?php
                 echo $_SESSION['Username'];
                 } ?></a></li>

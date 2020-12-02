@@ -1,5 +1,4 @@
 <?php
-
 class DataBase{
     protected function connect(){
         $pdo = new PDO("mysql:host=librarysystem.cb82keujv05g.us-east-2.rds.amazonaws.com;port=3306;dbname=LibrarySystem", 'admin', '123va321si21_');

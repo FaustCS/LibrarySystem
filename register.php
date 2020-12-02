@@ -44,8 +44,7 @@ if (isset($_POST['Add'])) {
                 ':un' => $_POST['UserName'],
                 ':ps' => $password)
         );
-        header("Location: login.php");
-        exit();
+        exit("<meta http-equiv='refresh' content='0; url=login.php'>");
     } else {
         print "<b>Помилка:</b><br>";
         foreach ($err as $error) {
@@ -63,7 +62,7 @@ if(isset($_POST['Cancel'])){
     <div>
         <p>Ім`я:</p>
         <p>Прізвище:</p>
-        <p>Логін:</p>
+        <p>Нікнейм:</p>
         <p>Вік:</p>
         <p>Номер телефону:</p>
         <p>Пароль:</p>
