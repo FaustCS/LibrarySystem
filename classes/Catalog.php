@@ -1,6 +1,21 @@
 <?php
 
-require_once 'Database.php';
+class DataBase{
+    protected function connect(){
+        $pdo = new PDO("mysql:host=librarysystem.cb82keujv05g.us-east-2.rds.amazonaws.com;port=3306;dbname=LibrarySystem", 'admin', '123va321si21_');
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $pdo->exec("set names utf8");
+        return $pdo;
+    }
+    protected function doQuery($query)
+    {
+
+        $pdo=$this->connect();
+        $stmt = $pdo->query("$query");
+        $data = $stmt->fetchAll();
+        return $data;
+    }
+}
 
 class Catalog extends Database
 {
@@ -17,6 +32,7 @@ class Catalog extends Database
                 echo 'Id '.($i+1)." Назва : <b>"?><html><a href="bookpage.php?book_id=<?php echo($data[$i][0]) ?>"></html><?php echo $data[$i][1].'</b></a> Автор: <b>'.$AutorData[0][0].' '.$AutorData[0][1].'</b> Видавництво: '.$data[$i][2].' Жанр: '.$data[$i][3].' Кількість сторінок: '.$data[$i][4].' В наявності: '.$data[$i][5];
                 if( $_SESSION['Username']=='admin') {
                     ?>
+
                     <html>
                     <a href="edit.php?book_id=<?php echo($data[$i][0]) ?>">Edit</a>/<a
                         href="delete.php?book_id=<?php echo($data[$i][0]) ?>">Delete</a>
@@ -60,6 +76,10 @@ if(empty($data)){
                 'ai' =>$AuthorId
        ));
    }
+   public function getLastId(){	   
+	   $data = $this->doQuery("Select Max(id) From Book");
+	   return $data[0][0];
+	}
    public function isAuthor($FirstName,$LastName){
        $pdo=$this->connect();
        $data=$this->doQuery("Select FirstName,LastName from Author where FirstName ='".$FirstName."' And LastName='".$LastName."'");
