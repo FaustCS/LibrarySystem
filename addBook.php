@@ -52,8 +52,9 @@ if($imageFileType != "png") {
 
 if(count($err)==0) {
     if ($createCatalog->findAuthor($_POST['AuthorFirstName'], $_POST['AuthorSecondName'])) {
-		$createCatalog->createBook($_POST['BookName'],$_POST['AuthorFirstName'], $_POST['AuthorSecondName'],$_POST['Publishing'],$_POST['Genre'],$_POST['PageNumber'],$_POST['InStock']);
-		move_uploaded_file($_FILES["FileToUpload"]["tmp_name"], $target_file);
+		$createCatalog->createBook($_POST['BookName'],$_POST['AuthorFirstName'], $_POST['AuthorSecondName'],$_POST['Publishing'],$_POST['Genre'],$_POST['PageNumber'],$_POST['InStock']);		
+		move_uploaded_file($_FILES["FileToUpload"]["tmp_name"], $target_dir . $createCatalog->getLastId() . ".png");
+		echo $target_dir . $createCatalog->getLastId() . ".png";
 		$_SESSION['message']='Книгу успішно додано!<br>';
         exit("<meta http-equiv='refresh' content='0; url=catalog.php'>");		
     } else {
@@ -62,8 +63,7 @@ if(count($err)==0) {
 }
 
 }
-
-if(isset($_POST['cancel'])){
+if($_POST['cancel']){
     exit("<meta http-equiv='refresh' content='0; url=catalog.php'>");
 }
 ?>
@@ -126,7 +126,7 @@ if(isset($_POST['cancel'])){
 			<p>
 				<input type="file" name="FileToUpload"></p>
 			<p><input type="submit" name="submit" value="Додати">
-				<input type="submit" name="cancel" value="Відмінити">
+				<input type="button" name="cancel" value="Відмінити">				
 		</form>
 	</div>
 <?php
