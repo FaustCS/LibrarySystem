@@ -4,7 +4,6 @@ $err=[];
 
 require_once 'components\header.php';
 require_once 'classes\Catalog.php';
-//echo $_SESSION['UserId']."<br>";
 
 $data=$editAndDelete->getInfo($_GET['book_id']);
 
