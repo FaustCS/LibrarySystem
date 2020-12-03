@@ -53,18 +53,18 @@ class Catalog extends Database
 class CreateCatalog extends Catalog {
 
    public function findAuthor($FirstName,$LastName){
-$data=$this->doQuery("Select * from Author where FirstName ='".$FirstName."' And LastName='".$LastName."'");
-if(empty($data)){
-    return false;
-}else{
-    return true;
-}
+	$data=$this->doQuery("Select * from Author where FirstName ='".$FirstName."' And LastName='".$LastName."'");
+	if(empty($data)){
+		return false;
+	}else{
+		return true;
+	}
    }
    public function createBook($BookName,$FirstName,$LastName,$Publishing,$Genre,$PageNumber,$InStock){
 
        $data=$this->doQuery("Select Id from Author where FirstName ='".$FirstName."' And LastName='".$LastName."'");
        $AuthorId=$data[0][0];
-   $pdo=$this->connect();
+	$pdo=$this->connect();
        $stmt = $pdo->prepare('INSERT INTO Book
         (BookName,publishing,Genre,AmountOfPages,InStock,AuthorId) VALUES ( :bn,:pb,:gn,:pn,:st,:ai)');
        $stmt->execute(array(
@@ -103,6 +103,30 @@ if(empty($data)){
 
 }
 
+class Review extends Catalog{
+	public function createReview($ReviewText,$UserName,$BookId){
+        $pdo=$this->connect();
+		$UserId = $this->doQuery("Select Id From User WHERE UserName = '" . $UserName . "'");
+        $stmt = $pdo->prepare('INSERT INTO Review (ReviewText, UserId, BookId, ReviewDate) VALUES (:rt,:ui,:bi, DATE_FORMAT(NOW(), \'%H:%i:%s, %d/%m/%y\'))');
+        $stmt->execute(array(
+            ':rt' => $ReviewText,
+            ':ui' => $UserId[0][0],
+            ':bi' => $BookId
+        ));
+    }
+	public function getReview($BookId){
+        $pdo=$this->connect();
+		$reviewData = $this->doQuery("Select * From Review WHERE BookId = " . $BookId);
+		if(empty($reviewData))return 0;
+		else return $reviewData;
+    }
+	public function getUserName($usrid){
+        $pdo=$this->connect();
+		$revUserName = $this->doQuery("Select UserName From User WHERE Id = " . $usrid);		
+		return $revUserName[0][0];
+    }
+}
+
 class EditAndDelete extends Catalog {
     public function findBookName($id){
         $pdo=$this->connect();
@@ -129,3 +153,4 @@ public function edit($BookName,$Publishing,$Genre,$PageNum,$inStock,$id){
 $editAndDelete = new EditAndDelete();
 $createCatalog = new CreateCatalog();
 $catalog = new Catalog();
+$review = new Review();
