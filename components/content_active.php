@@ -1,71 +1,41 @@
 <section class="active_content">
     <div class="container">
         <ul class="row"></ul>
-        <li3 class="grid"><h3> ПРИВАТНІСТЬ ТА БЕЗПЕКА</h3>
+        <li3 class="grid"><h3> Приватність та безпека</h3>
             <p>
-                fdsfsdfsdfsdfdsfdsfsdfsdfsdfsdsddsfds </p>
+                Наша інформаційна система пропонує </p>
             <p>
-                fdsfsdfsdfsdfdsfdsfsdfsdfsdfsdsddsfds </p>
+                вам створити цілком безкоштовний та </p>
             <p>
-                fdsfsdfsdfsdfdsfdsfsdfsdfsdfsdsddsfds </p>
-            <p>
-                fdsfsdfsdfsdfdsfdsfsdfsdfsdfsdsddsfds </p>
-            <p>
-                fdsfsdfsdfsdfdsfdsfsdfsdfsdfsdsddsfds </p>
-            <p>
-                fdsfsdfsdfsdfdsfdsfsdfsdfsdfsdsddsfds </p>
-            <p>
-                fdsfsdfsdfsdfdsfdsfsdfsdfsdfsdsddsfds </p>
+                безпечний особистий кабінет</p>
+
 
         </li3>
 
-        <li3 class="grid"><h3> Чому приватне вивчення?</h3>
+        <li3 class="grid"><h3> Чому саме наша ІС?</h3>
             <p>
-                fdsfsdfsdfsdfdsfdsfsdfsdfsdfsdsddsfds </p>
+                В нашій ІС використовується передові </p>
             <p>
-                fdsfsdfsdfsdfdsfdsfsdfsdfsdfsdsddsfds </p>
+                технологій та алгоритми для кращого </p>
             <p>
-                fdsfsdfsdfsdfdsfdsfsdfsdfsdfsdsddsfds </p>
-            <p>
-                fdsfsdfsdfsdfdsfdsfsdfsdfsdfsdsddsfds </p>
-            <p>
-                fdsfsdfsdfsdfdsfdsfsdfsdfsdfsdsddsfds </p>
-            <p>
-                fdsfsdfsdfsdfdsfdsfsdfsdfsdfsdsddsfds </p>
-            <p>
-                fdsfsdfsdfsdfdsfdsfsdfsdfsdfsdsddsfds </p>
+                сприйняття сайту користувачу </p>
         </li3>
         <li3 class="grid"><h3> Швидко, легко та доступно</h3>
             <p>
-                fdsfsdfsdfsdfdsfdsfsdfsdfsdfsdsddsfds </p>
+                На нашому сайті ви можете в один клік </p>
             <p>
-                fdsfsdfsdfsdfdsfdsfsdfsdfsdfsdsddsfds </p>
+                 взяти книгу яку саме вам сподобалася </p>
             <p>
-                fdsfsdfsdfsdfdsfdsfsdfsdfsdfsdsddsfds </p>
-            <p>
-                fdsfsdfsdfsdfdsfdsfsdfsdfsdfsdsddsfds </p>
-            <p>
-                fdsfsdfsdfsdfdsfdsfsdfsdfsdfsdsddsfds </p>
-            <p>
-                fdsfsdfsdfsdfdsfdsfsdfsdfsdfsdsddsfds </p>
-            <p>
-                fdsfsdfsdfsdfdsfdsfsdfsdfsdfsdsddsfds </p>
+                та почати її читати</p>
+
         </li3>
-        <li3 class="grid"><h3> 100% ЗАДОВОЛЕННЯ</h3>
+        <li3 class="grid"><h3> 100% задоволення</h3>
             <p>
-                fdsfsdfsdfsdfdsfdsfsdfsdfsdfsdsddsfds </p>
+                Всі наші книги є сертифіковані та </p>
             <p>
-                fdsfsdfsdfsdfdsfdsfsdfsdfsdfsdsddsfds </p>
+                неодмінно залишать вам емоцію після </p>
             <p>
-                fdsfsdfsdfsdfdsfdsfsdfsdfsdfsdsddsfds </p>
-            <p>
-                fdsfsdfsdfsdfdsfdsfsdfsdfsdfsdsddsfds </p>
-            <p>
-                fdsfsdfsdfsdfdsfdsfsdfsdfsdfsdsddsfds </p>
-            <p>
-                fdsfsdfsdfsdfdsfdsfsdfsdfsdfsdsddsfds </p>
-            <p>
-                fdsfsdfsdfsdfdsfdsfsdfsdfsdfsdsddsfds </p>
+                прочитання </p>
         </li3>
     </div>
 </section>

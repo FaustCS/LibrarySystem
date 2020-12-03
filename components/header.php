@@ -5,6 +5,7 @@
     <title>Бібліотека Не_Рви</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="img/storytelling.png">
+<!--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">-->
 </head>
 <style>
     @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&display=swap');
@@ -27,9 +28,9 @@
             <li><a href="logout.php">Вихід</a></li>
             <li><a href="account.php">Особистий кабінет</a>
             </li>
-            <li ><a href="account.php"><?php
-                echo $_SESSION['Username'];
-                } ?></a></li>
+            <li><a href="account.php"><?php
+                    echo $_SESSION['Username'];
+                    } ?></a></li>
         </ul>
     </nav>
 </header>

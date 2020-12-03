@@ -52,7 +52,7 @@ if (isset($_POST['Add'])) {
         }
     }
 }
-if(isset($_POST['Cancel'])){
+if (isset($_POST['Cancel'])) {
     exit("<meta http-equiv='refresh' content='0; url=index.php'>");
 }
 ?>
@@ -131,3 +131,4 @@ if(isset($_POST['Cancel'])){
 
     }
 </style>
+

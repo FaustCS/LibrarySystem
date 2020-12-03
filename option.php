@@ -17,7 +17,6 @@ if($data[0][7]==null){
 ?>
 <html>
 
-<h1>Редагування книги: <?php echo $data[0][1]?></h1>
 
 
 <form  method="post">
