@@ -1,6 +1,7 @@
 <?php
 require('components/header.php');
 require('components/footer.php');
+require_once 'classes\User.php';
 $pdo = new PDO('mysql:host=librarysystem.cb82keujv05g.us-east-2.rds.amazonaws.com;port=3306;dbname=LibrarySystem', 'admin', '123va321si21_');
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
@@ -19,10 +20,8 @@ if (isset($_POST['Add'])) {
     if ($_POST['Password1'] != $_POST['Password2']) {
         $err[] = "Паролі не співпадають";
     }
-    $stmt = $pdo->query("SELECT * FROM User Where Username='" . $_POST['UserName'] . "'");
-    $query = $stmt->fetchAll();
-
-    if (is_null($query)) {
+    $id = $user->isUsernameExist($_POST['UserName']);
+    if (isset($id)) {
         $err[] = "Користувач з таким ніком уже існує";
     }
 

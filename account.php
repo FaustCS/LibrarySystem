@@ -96,7 +96,7 @@ if(strlen($_POST['email'])>5 && $_POST['submitEmail']){
         font-size: 18px;
         padding: 10px;
         margin-top: 20px;
-        background: rgb(235, 228, 228); /*229,255,204 */
+        background:  #F0F0EC; /*229,255,204 */
         height: 200px;
         -moz-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
         -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);

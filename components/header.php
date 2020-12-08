@@ -28,9 +28,15 @@
             <li><a href="logout.php">Вихід</a></li>
             <li><a href="account.php">Особистий кабінет</a>
             </li>
-            <li><a href="account.php"><?php
+            <?php
+            if (($_SESSION['Username'])=='admin') { ?>
+                <li><a href="AdminPanel.php">Адмін панель</a></li>
+            <?php }else{ ?>
+            <li><a ><?php
                     echo $_SESSION['Username'];
-                    } ?></a></li>
+                    }
+            } ?></a></li>
+
         </ul>
     </nav>
 </header>
